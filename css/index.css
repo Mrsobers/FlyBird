@@ -1,0 +1,235 @@
+#flyWrap {
+	width: 343px;
+	height: 480px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../img/bg.jpg);
+	overflow: hidden;
+}
+
+#gameStart {
+	position: absolute;
+	width: 100%;
+}
+
+#score {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 50px;
+}
+
+#head {
+	position: absolute;
+	top: 130px;
+	-webkit-animation: headMove 3s linear infinite;
+}
+
+#head img {
+	position: absolute;
+	left: 40px;
+}
+
+#head span {
+	position: absolute;
+	left: 250px;
+	background: url(../img/bird0.png);
+	width: 40px;
+	height: 26px;
+	top: 28px;
+	-webkit-animation: birdFly 0.7s ease-in infinite;
+}
+
+#btns {
+	position: absolute;
+	top: 300px;
+	left: 60px;
+	z-index: 5;
+}
+
+#btns img {
+	width: 85px;
+	height: 29px;
+	float: left;
+}
+
+#btns #submit {
+	margin-left: 30px;
+}
+
+#slider {
+	position: absolute;
+	top: 422px;
+	width: 1000px;
+	-webkit-animation: sliderMove 4s linear infinite;
+}
+
+#slider img {
+	float: left
+}
+
+
+#flyBird {
+	width: 40px;
+	height: 26px;
+	position: absolute;
+	left: 60px;
+	top: 130px;
+	display: none;
+}
+
+
+#pipeWrap {
+	width: 343px;
+	height: 422px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#pipeWrap .pipe {
+	width: 62px;
+	position: absolute;
+	left: 400px;
+	top: 0;
+	height: 422px;
+}
+
+#pipeWrap .pipe .pipeTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/up_mod.png);
+	width: 62px;
+}
+
+#pipeWrap .pipe .pipeTop div {
+	position: absolute;
+	width: 62px;
+	background: url(../img/up_pipe.png);
+	left: 0;
+	bottom: 0;
+	height: 60px;
+}
+
+#pipeWrap .pipe .pipeBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: url(../img/down_mod.png);
+	width: 62px;
+}
+
+#pipeWrap .pipe .pipeBottom div {
+	position: absolute;
+	width: 62px;
+	height: 60px;
+	top: 0;
+	left: 0;
+	background: url(../img/down_pipe.png);
+}
+
+#gameOver {
+	width: 343px;
+	height: 480px;
+	position: absolute;
+	display: none;
+}
+
+#gameOver #over {
+	position: absolute;
+	width: 221px;
+	height: 40px;
+	left: 61px;
+	top: 120px;
+	-webkit-animation: overMove 1s ease-out forwards;
+}
+
+#gameOver #message {
+	position: absolute;
+	width: 269px;
+	height: 135px;
+	left: 37px;
+	top: 170px;
+	-webkit-animation: messageMove 1s ease-out forwards;
+}
+
+#gameOver #okButton {
+	position: absolute;
+	width: 96px;
+	height: 33px;
+	left: 123px;
+	top: 315px;
+	-webkit-animation: okButtonMove 1s ease-out forwards;
+}
+
+@-webkit-keyframes okButtonMove {
+	from {
+		top: 550px;
+	}
+
+	to {
+		top: 315px;
+	}
+}
+
+@-webkit-keyframes messageMove {
+	from {
+		top: -300px;
+	}
+
+	to {
+		top: 170px;
+	}
+}
+
+
+@-webkit-keyframes overMove {
+	from {
+		left: -400px;
+	}
+
+	to {
+		left: 61px;
+	}
+}
+
+
+
+
+/*head上下动画*/
+@-webkit-keyframes headMove {
+	0% {
+		top: 130px;
+	}
+
+	50% {
+		top: 160px;
+	}
+
+	100% {
+		top: 130px;
+	}
+}
+
+/*小鸟的翅膀*/
+@-webkit-keyframes birdFly {
+	from {
+		background: url(../img/bird0.png);
+	}
+
+	to {
+		background: url(../img/bird1.png);
+	}
+}
+
+/*slider滑动*/
+@-webkit-keyframes sliderMove {
+	from {
+		left: 0px;
+	}
+
+	to {
+		left: -343px;
+	}
+}

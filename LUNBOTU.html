@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+			#box{width: 500px;height: 300px;border: 2px solid black;margin: 100px auto 0;position: relative;/*overflow: hidden;*/}
+			#imgWrap{width: 9999px;height: 100%;position: absolute;}
+			p{width: 500px;height: 300px;float: left;}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="imgWrap">
+				<p style="background: red;"></p>
+				<p style="background: lightgreen;"></p>
+				<p style="background: lightblue;"></p>
+				<p style="background: lightseagreen;"></p>
+				<p style="background: red;"></p>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var imgWrap=document.getElementById("imgWrap");
+	setInterval(function(){
+		if(imgWrap.offsetLeft<='-2000'){
+			imgWrap.style.left=0;			
+		}offsetLeft
+		imgWrap.style.left=imgWrap.-5+"px";
+	},10)
+</script>
